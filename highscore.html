@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/game.css">
+
+  <title>Match All The Things Highscore</title>
+ </head>
+
+ <body>
+    
+    <div>
+      <nobr><h2><b><font size=22>Match All The Things Highscore</font></b></h2></nobr>
+    </div>
+    <div align="left" valign="top"><img name="backOfCard" src="images/backOfCard.jpg">      
+    </div>
+        
+    <br>
+      <script language="JavaScript1.2" type="text/javascript">
+      
+        document.write("<table width=\"100%\" cellspacing=\"0\" cellpadding=\"4\" border=\"2\">");
+        document.write("<tr>");
+        document.write("<th align=\"left\">Rank</th>");
+        document.write("<th align=\"left\">Points</th>");
+        document.write("<th align=\"left\">Name</th>");
+        document.write("<th align=\"left\">Date</th>");
+        document.write("<th align=\"left\">Level</th>");
+        document.write("<th align=\"left\">Seconds</th>");
+        document.write("<th align=\"left\">Number of Attempts</th>");
+        document.write("<th align=\"left\">Accurcy %</th>");
+        document.write("</tr>");
+        
+        if(opener.arrHighScore.length != null)
+        {
+          var num = opener.arrHighScore.length;
+          for(var i = num - 1; 
+                  i >= 0; 
+                  i--)
+          {
+            document.write("<tr>");
+            document.write("<td>" + (num - i) + "</td>");
+            document.write("<td>" + opener.arrHighScore[i].Points + "</td>");
+            document.write("<td>" + opener.arrHighScore[i].strName + "</td>");
+            document.write("<td>" + opener.arrHighScore[i].strDate + "</td>");
+            document.write("<td>" + opener.arrHighScore[i].Level + "</td>");
+            document.write("<td>" + opener.arrHighScore[i].Seconds + "</td>");
+            document.write("<td>" + opener.arrHighScore[i].Attempts + "</td>");
+            document.write("<td>" + opener.arrHighScore[i].Accurcy + "</td>");
+            document.write("</tr>");
+          }
+        }
+        document.write("</table>");             
+      </script>
+    </br>
+    <div align="right" valign="top"><img name="frogThinking" src="images/thing7.jpg">      
+    </div>
+  </body>
+</html>

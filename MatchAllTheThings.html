@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/game.css">
+    
+    <script language="JavaScript1.2" src="js/match.js" type="text/javascript"></script>
+  </head>
+  
+  <body onload="loadImages();">
+    
+    <div align="right" valign="top">      
+    </div>
+
+    <div class="row">
+      <div class="col-md-9">
+        <h1 id="title">OMS CS6460 Project - 2017 - dedge6</h1>
+          <h2>Match All the Things</h2> 
+            <h3>by Douglas Edge</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+         <div class="gameboard" style="float: left">
+            <table>
+              <td><a href="javascript:showCard(0)"><img name="backOfCard1" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(1)"><img name="backOfCard2" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(2)"><img name="backOfCard3" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(3)"><img name="backOfCard4" src="images/backOfCard.jpg"></a></td>
+              <tr>
+              <td><a href="javascript:showCard(4)"><img name="backOfCard5" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(5)"><img name="backOfCard6" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(6)"><img name="backOfCard7" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(7)"><img name="backOfCard8" src="images/backOfCard.jpg"></a></td>
+              </tr>
+              <tr>
+              <td><a href="javascript:showCard(8)"><img name="backOfCard9" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(9)"><img name="backOfCard10" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(10)"><img name="backOfCard11" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(11)"><img name="backOfCard12" src="images/backOfCard.jpg"></a></td>
+              </tr>
+              <tr>
+              <td><a href="javascript:showCard(12)"><img name="backOfCard13" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(13)"><img name="backOfCard14" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(14)"><img name="backOfCard15" src="images/backOfCard.jpg"></a></td>
+              <td><a href="javascript:showCard(15)"><img name="backOfCard16" src="images/backOfCard.jpg"></a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    <div class="dashboard" style="float: left">
+      <table color="#777">       
+        <td><img src="images/blank.gif" width="0" height="0"></td>
+            <tr bgcolor="#9999FF">
+              <td><a href="javascript:startGame()"><img src="images/startstop1.gif" width="90" height="50"></a></td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="0" height="0"></td>
+            </tr>
+            <tr bgcolor="#9999FF">
+              <td><a href="javascript:stopGame()"><img src="images/startstop4.gif" width="90" height="50"></a></td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="0"></td>
+            </tr>
+            <tr>
+              <td><img src="images/GameLevel.gif" width="90" height="36"></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0">
+                  <tr bgcolor="#9999">
+                    <td><img src="images/SmallBlankSpace.gif" width="0" height="25"></td>
+                    <td><a href="javascript:setLevel(-1)"><img src="images/plusminus3.gif" width="15" height="25"></a></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="0" height="25"></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="0" height="25"></td> 
+                    <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                    <td><a href="javascript:setLevel(1)"><img src="images/plusminus1.gif" width="15" height="25"></a></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="0" height="25"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="images/SmallBlankSpace.gif" width="90" height="0"></td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="0" height="0"></td>
+            </tr>
+      </table>
+    </div>
+  
+    <div class="dashboard2" style="float: left">
+      <table>       
+         <tr>
+          <td><img src="images/TotalTime.gif" width="90" height="36"></td>
+         </tr>
+         <tr>
+           <td>
+             <table cellspacing="0" cellpadding="0">
+               <tr bgcolor="#9999FF">
+                 <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                 <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                 <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                 <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                 <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                 <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+             <td><img src="images/blank.gif" width="0" height="0"></td>
+           </tr>
+           <tr>
+             <td><img src="images/attempts.gif" width="90" height="36"></td>
+           </tr>
+           <tr>
+             <td>
+               <table cellspacing="0" cellpadding="0" border="0">
+                 <tr bgcolor="#9999FF">
+                   <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                   <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                   <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                   <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                   <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                   <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                 </tr>
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td><img src="images/blank.gif" width="0" height="0"></td>
+           </tr>
+           <tr>
+              <td><img src="images/TotalFound.gif" width="90" height="36"></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0">
+                  <tr bgcolor="#9999FF">
+                    <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                    <td><img src="images/SmallBlankSpace.gif" width="15" height="25"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr bgcolor="#9999FF">
+              <td><a href="javascript:showHighScore()"><img src="images/highscore.gif" width="90" height="45"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+<table width=625 cellpadding=10>
+<tr class="instructions"><td>
+<h2>Instructions</h2>
+
+Before you begin, be sure to select the difficulty setting by adjusting the Game Level down(-) or up(+).  0 for example will allow 
+the pictures, after selected, to remain on the screen longer where a higher setting will perform the opposite.  The highest difficulty 
+level is 9.  These options can only be changed after the game has stopped. 
+
+<br><br>
+
+To start the game, click on the '<b>Start</b>' button.   
+
+<br><br>
+
+The game will track how many matches were found, the number of attempts it took to make matches, and the total time in seconds 
+occurred while the game is in play.  
+
+You can stop the game at any time by clicking on the red'<b>Stop</b>' button.   
+<br><br>
+
+After you complete the game, you will be asked to enter in your Name so you can be included on the High Score list.  Next, be sure to 
+press the <b>High Score</b> button to see your results.  You can play as many times as you like or take turns with someone else.  The 
+scores will be ranked and displayed on the High Score list.
+
+Have Fun!  Suggestion: After each game, increase the game level.  You may be surprised how fast you can make matches!
+<br><br>
+
+<center>
+  <font size="2" face="helvetica,arial,sans-serif">
+    <font color="000000">Match All The Things 2017 version 1.0 by <a>Douglas Edge</a>
+    </font>
+  </font>
+ </body>
+</html>

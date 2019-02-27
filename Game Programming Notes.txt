@@ -1,0 +1,3 @@
+Be sure to include an instruction file of how to load and start the game.
+
+85 x 75 is what the picture sizes need to be in the game to match the tile sizes. 
